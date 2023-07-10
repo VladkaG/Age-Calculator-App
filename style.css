@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+  min-width: 600px;
   background: #fff;
   padding: 50px;
   border-radius: 5% 5% 25% 5%;
@@ -25,7 +26,6 @@ body {
 
 .header {
   display: flex;
-  min-width: 600px;
   padding-bottom: 35px;
 }
 
@@ -52,7 +52,7 @@ body {
   padding: 13px;
   border: 1px solid #b8b8b8;
   border-radius: 6px;
-  font-size: 24px;
+  font-size: 5vmin;
   font-weight: 600;
 }
 .input:hover {
@@ -79,8 +79,8 @@ body {
 }
 .btn {
   position: absolute;
-  bottom: -35px;
-  right: -5px;
+  bottom: -40px;
+  right: -20px;
   padding: 18px;
   background: #8949ff;
   border: none;
@@ -89,8 +89,8 @@ body {
 .btn:hover {
   cursor: pointer;
 }
-.btn:active{
-	background: #000;
+.btn:active {
+  background: #000;
 }
 /***************************************************/
 
@@ -99,7 +99,7 @@ body {
 }
 
 .content-string {
-  font-size: 78px;
+  font-size: 15vmin;
   font-weight: 800;
   font-style: italic;
   margin-bottom: -25px;
@@ -112,4 +112,59 @@ body {
 .content-string span {
   padding-right: 3px;
   color: #8949ff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-width: auto;
+    padding: 40px 20px;
+  }
+  .header {
+    padding-bottom: 70px;
+  }
+  .btn {
+    right: 42%;
+    padding: 10px;
+  }
+  .input {
+    width: 100%;
+  }
+  .content {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 465px) {
+  .header-column {
+    margin-right: 20px;
+  }
+  .input {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .btn {
+    right: 38%;
+  }
+  .header-column{
+    margin-right: -5px;
+  }
+  .header-column:last-child{
+    margin-right: -20px;
+  }
+  .input {
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 375px) {
+  .btn {
+    right: 37%;
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .btn {
+    right: 35%;
+    padding: 10px;
+  }
 }
