@@ -18,7 +18,7 @@ body {
 .container {
   min-width: 600px;
   background: #fff;
-  padding: 50px;
+  padding: 45px;
   border-radius: 5% 5% 25% 5%;
 }
 
@@ -61,7 +61,9 @@ body {
 .input:focus {
   outline-color: #aa44fd;
 }
-
+#myForm {
+  position: relative;
+}
 /***************************************************/
 
 .line-container {
@@ -78,9 +80,10 @@ body {
   top: 50%;
 }
 .btn {
+  z-index: 10;
   position: absolute;
   bottom: -40px;
-  right: -20px;
+  right: 0px;
   padding: 18px;
   background: #8949ff;
   border: none;
@@ -114,6 +117,22 @@ body {
   color: #8949ff;
 }
 
+/***************************************************/
+
+.input-error {
+  border: 1px solid rgb(254, 57, 86);
+  background: transparent;
+}
+.label-error {
+  color: rgb(254, 57, 86);
+}
+.error {
+  padding-top: 5px;
+  color: rgb(254, 57, 86);
+  font-size: 12px;
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   .container {
     min-width: auto;
@@ -145,11 +164,12 @@ body {
 @media (max-width: 400px) {
   .btn {
     right: 38%;
+    padding: 8px;
   }
-  .header-column{
+  .header-column {
     margin-right: -5px;
   }
-  .header-column:last-child{
+  .header-column:last-child {
     margin-right: -20px;
   }
   .input {
@@ -159,12 +179,12 @@ body {
 @media (max-width: 375px) {
   .btn {
     right: 37%;
-    padding: 10px;
+    padding: 8px;
   }
 }
 @media (max-width: 320px) {
   .btn {
     right: 35%;
-    padding: 10px;
+    padding: 8px;
   }
 }

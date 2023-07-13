@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -16,32 +16,61 @@
   <body>
     <div class="wrapper">
       <div class="container">
-        <div class="header">
+        <form action="" id="myForm" class="header">
           <div class="header-column">
             <label for="day" class="label">day</label>
-            <input type="text" name="day" placeholder="DD" class="input" />
+            <input
+              id="day"
+              type="tel"
+              name="day"
+              placeholder="DD"
+              autocomplete="off"
+              class="input"
+            />
+            <span id="dayError" class="error"></span>
           </div>
           <div class="header-column">
             <label for="months" class="label">month</label>
-            <input type="text" name="months" placeholder="MM" class="input" />
+            <input
+              id="month"
+              type="tel"
+              name="month"
+              placeholder="MM"
+              autocomplete="off"
+              class="input"
+            />
+            <span id="monthError" class="error"></span>
           </div>
           <div class="header-column">
             <label for="year" class="label">year</label>
-            <input type="text" name="year" placeholder="YYYY" class="input" />
+            <input
+              id="year"
+              type="tel"
+              name="year"
+              placeholder="YYYY"
+              autocomplete="off"
+              class="input"
+            />
+            <span id="yearError" class="error"></span>
           </div>
-        </div>
-        <div class="line-container">
-          <div class="line"></div>
           <button class="btn">
             <img src="images//icon-arrow.svg" alt="button" />
           </button>
+        </form>
+        <div class="line-container">
+          <div class="line"></div>
         </div>
         <div class="content">
-          <div class="content-string"><span>38</span>years</div>
-          <div class="content-string"><span>3</span>months</div>
-          <div class="content-string"><span>26</span>days</div>
+          <div class="content-string">
+            <span id="years-result">--</span>years
+          </div>
+          <div class="content-string">
+            <span id="months-result">--</span>months
+          </div>
+          <div class="content-string"><span id="days-result">--</span>days</div>
         </div>
       </div>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
